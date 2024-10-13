@@ -1,6 +1,6 @@
 
 var dv = document.getElementById("content");
-dv.style.opacity = 1;
+dv.style.opacity = 0;
 var val = 0;
 
 function timer(){

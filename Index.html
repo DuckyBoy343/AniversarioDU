@@ -3,14 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>Feliz aniversario</title>
-        <!-- <link rel="stylesheet" type="text/css" href="format.css"> -->
+        <link rel="stylesheet" type="text/css" href="format.css">
     </head>
     <body style="margin:0px">
-        <div id="imgTxt">
+        <canvas id="canvas"></canvas>
+
+		
+		<div id="imgTxt">
 			<span id="Txt"></span> <br />
 			<span id="tmp"></span>
 			<img id="img" src="">
 		</div>
+		
+		<div id="heartTxt" onclick="hide()">
+			<span id="clickMe">Click!</span>
+			<div id="heart">
+				<button id="button" onclick="play()" style="background-image: url(pic/love.png);"></button>
+			</div>
+		</div>
+
         <div id="content">
 			<h2 id="together">Hemos estado juntos</h2>
 			<div id="timer">
@@ -21,7 +32,42 @@
 			</div>
 		</div>
 
+		<div id = "typeDiv">
+        	<span id="txt1"></span> <br />
+        	<span id="txt2"></span>
+    	</div>
+
+		<div id="lol">
+			<b>HOLA</b>
+			<div id="carousel">
+				<img src="pic/pic1.jpg" class="active" alt="Imagen 1">
+				<img src="pic/pic2.jpg" alt="Imagen 2">
+				<img src="pic/pic3.jpg" alt="Imagen 3">
+				<img src="pic/pic4.jpg" alt="Imagen 4">
+			</div>
+		</div>
+
+		<script >
+			var ok = 0;
+			var flag = 1;
+			var myImage = document.getElementById("img");
+			var myTxt = document.getElementById("Txt");
+			var imageArray = ["pic/pic1.jpg", "pic/pic2.jpg", "pic/pic3.jpg", "pic/pic4.jpg", "pic/pic5.jpg", "pic/pic6.jpg", 
+			"pic/pic7.jpg", "pic/pic8.jpg", "pic/pic9.jpg", "pic/pic10.jpg", "pic/pic11.jpg", "pic/pic12.jpg", "pic/pic13.jpg",
+			"pic/pic14.jpg", "pic/pic15.jpg", "pic/pic16.jpg"];
+			var imageIndex = 0;
+			var txtArray = ["Los momentos juntos.", "Las metas que compartimos.", "Los besos que son eternos ♡",
+			 "Los lugares donde estuvimos.", "Nuestras sonrisas", "Las fotos juntos (≧v≦)", "Mi amor por ti. (Que nunca terminara (/ω＼)",
+			 "Nuestro hermoso cielo.", "Estar en tu mundo.", "Y tu en el mio.", "Nuestro amor.", 
+			 "Verte cumplir tus metas.", "Y dejar nuestra marca.", "Tu risa que llega a mi corazón.", "No olvides...", "Tu me haces tan feliz."];
+			var len = imageArray.length;
+			var t = 0;
+		</script>
+
         <script type="text/javascript" src="date.js"></script>
-        <!-- <script type="text/javascript" src="playImg.js"></script> -->
+		<script type="text/javascript" src="typeWriter.js"></script>
+		<script type="text/javascript" src="playImg.js"></script>
+		<!-- <script type="text/javascript" src="stars.js"></script> -->
+		<script type="text/javascript" src="hearts.js"></script>
     </body>
 </html>
