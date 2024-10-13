@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feliz aniversario</title>
+        <link rel="stylesheet" type="text/css" href="css/Message.css">
+    </head>
+    <body>
+        <div>
+            <div class="slideshow-container">
+
+                <!-- Full-width slides/quotes -->
+                <div class="mySlides">
+                    <q>Te amo tanto más cuanto que creo que te había gustado por mí y por nada más.</q>
+                    <p class="author">- John Keats</p>
+                </div>
+            
+                <div class="mySlides">
+                    <q>Las estrellas siempre brillaran para ti.</q>
+                    <p class="author">- Un hermoso recuerdo</p>
+                </div>
+            
+                <div class="mySlides">
+                    <q>Mi amor por ti nace desde lo mas profundo de ni corazón y llega hasta el tuyo.</q>
+                    <p class="author">- Tu amor</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Aún en mis sueños, deseo que siempre estes a mi lado.</q>
+                    <p class="author">- Uriel Morales</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Te amaré, iincluso cuando los mortales nos hayan olvidado y no seamos mas que polvo estelar.</q>
+                    <p class="author">- Hades</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Siempre seras la estrella mas hermosa de mi firmamento.</q>
+                    <p class="author">- Tu amor</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Sigamos creando hermosos recuerdos juntos.</q>
+                    <p class="author">- Tu amor</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Mi brujita hermosa.</q>
+                    <p class="author">- Uriel Morales</p>
+                </div>
+
+                <div class="mySlides">
+                    <q>Siempre estaré para ti.</q>
+                    <p class="author">- Uriel Morales</p>
+                </div>
+            
+                <!-- Next/prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            
+            <!-- Dots/bullets/indicators -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+            </div>
+
+            <br><br><br>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4RVDPETIiAhRyKvfMCIUxF?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <canvas id="canvas">
+            </canvas>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <!-- Slideshow container -->
+
+		<script type="text/javascript" src="js/hearts.js"></script>
+    </body>
+</html>
